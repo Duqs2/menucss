@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --clr: #1173ac;
+}
+
+body{
+    background: var(--clr);
+
+    
+}
+
+
+header {
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   min-height: 20vh;
+   background: var(--clr);
+}
+
+footer {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 24vh;
+}
+
+.navegacao {
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background: #fff ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 15px 5px 15px ;
+}
+
+.navegacao ul {
+    display: flex;
+    width: 350px;
+}
+
+.navegacao ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navegacao ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+}
+
+.navegacao ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 1s;
+    color: var(--clr);
+}
+
+.navegacao ul li.ativa a .icon{
+    transform: translateY(-32px);
+    color: rgb(196, 26, 26);
+
+}
+
+.navegacao ul li a .text {
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.navegacao ul li.ativa a .text {
+    opacity: 1;
+}
+
+
+#imagembody {
+    display: block;
+    height: 250px;
+    width: 1140px;
+    margin: 0px auto;
+    opacity: 1;
+    transition: 1s;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+
+#imagembody2 {
+    display: block;
+    height: 400px;
+    width: 900px;
+    margin: 50px auto;
+    opacity: 1;
+    transition: 1s;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#imagembody2:hover{
+    height: 410px;
+    width: 910px;
+}
+
+.indicador {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: #4821d6;
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 1s;
+}
+
+.indicador::before {
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: -22px;;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--clr);
+}
+
+.indicador::after {
+    content:'';
+    position: absolute;
+    top: 50%;
+    right: -22px;;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--clr);
+}
+
+.navegacao ul li:nth-child(1).ativa ~ .indicador{
+    transform: translateX(calc(70px * 0));
+}
+
+.navegacao ul li:nth-child(2).ativa ~ .indicador{
+    transform: translateX(calc(70px * 1));
+}
+
+.navegacao ul li:nth-child(3).ativa ~ .indicador{
+    transform: translateX(calc(70px * 2));
+}
+
+.navegacao ul li:nth-child(4).ativa ~ .indicador{
+    transform: translateX(calc(70px * 3));
+}
+.navegacao ul li:nth-child(5).ativa ~ .indicador{
+    transform: translateX(calc(70px * 4));
+}
+
+
+.copyright {
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
